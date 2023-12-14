@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="backgroundColor">#ECF4D6</color>
+    <color name="primaryColor">#2D9596</color>
+    <color name="secondaryColor">#265073</color>
+
+    <color name="md_theme_light_primary">#00696A</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#6FF6F8</color>
+    <color name="md_theme_light_onPrimaryContainer">#002020</color>
+    <color name="md_theme_light_secondary">#00639B</color>
+    <color name="md_theme_light_onSecondary">#FFFFFF</color>
+    <color name="md_theme_light_secondaryContainer">#CEE5FF</color>
+    <color name="md_theme_light_onSecondaryContainer">#001D33</color>
+    <color name="md_theme_light_tertiary">#4C5F7C</color>
+    <color name="md_theme_light_onTertiary">#FFFFFF</color>
+    <color name="md_theme_light_tertiaryContainer">#D3E3FF</color>
+    <color name="md_theme_light_onTertiaryContainer">#051C35</color>
+    <color name="md_theme_light_background">#FAFFE5</color>
+    <color name="md_theme_light_onBackground">#141F00</color>
+
+    <color name="md_theme_dark_primary">#4CDADB</color>
+    <color name="md_theme_dark_onPrimary">#003737</color>
+    <color name="md_theme_dark_primaryContainer">#004F50</color>
+    <color name="md_theme_dark_onPrimaryContainer">#6FF6F8</color>
+    <color name="md_theme_dark_secondary">#97CBFF</color>
+    <color name="md_theme_dark_onSecondary">#003353</color>
+    <color name="md_theme_dark_secondaryContainer">#004A76</color>
+    <color name="md_theme_dark_onSecondaryContainer">#CEE5FF</color>
+    <color name="md_theme_dark_tertiary">#B3C8E9</color>
+    <color name="md_theme_dark_onTertiary">#1D314B</color>
+    <color name="md_theme_dark_tertiaryContainer">#344863</color>
+    <color name="md_theme_dark_onTertiaryContainer">#D3E3FF</color>
+    <color name="md_theme_dark_background">#141F00</color>
+    <color name="md_theme_dark_onBackground">#CBEF86</color>
+</resources>
