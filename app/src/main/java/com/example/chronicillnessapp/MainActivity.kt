@@ -14,7 +14,7 @@ import com.example.chronicillnessapp.databinding.ActivityMainBinding
 import com.example.chronicillnessapp.fragments.AnalyticsFragment
 import com.example.chronicillnessapp.fragments.AssessmentFragment
 import com.example.chronicillnessapp.fragments.DarkModeFragment
-import com.example.chronicillnessapp.fragments.ForYouFragment
+import com.example.chronicillnessapp.fragments.ForyouFragment
 import com.example.chronicillnessapp.fragments.HelpFragment
 import com.example.chronicillnessapp.fragments.HomeFragment
 import com.example.chronicillnessapp.fragments.LanguageFragment
@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.bottomNavigation.setOnItemSelectedListener {item ->
             when(item.itemId) {
                 R.id.bottom_analytics -> openFragment(AnalyticsFragment())
-                R.id.bottom_for_you -> openFragment(ForYouFragment())
+                R.id.bottom_for_you -> openFragment(ForyouFragment())
                 R.id.bottom_assessment -> openFragment(AssessmentFragment())
                 R.id.bottom_home -> openFragment(HomeFragment())
 
