@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/home"
+    android:id="@+id/nav_graph.xml">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.chronicillnessapp.fragments.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/analytics"
+        android:name="com.example.chronicillnessapp.fragments.AnalyticsFragment"
+        android:label="@string/analytics"
+        tools:layout="@layout/fragment_analytics" />
+
+    <fragment
+        android:id="@+id/foryou"
+        android:name="com.example.chronicillnessapp.fragments.ForyouFragment"
+        android:label="@string/foryou"
+        tools:layout="@layout/fragment_foryou" />
+
+    <fragment
+        android:id="@+id/assessment"
+        android:name="com.example.chronicillnessapp.fragments.AssessmentFragment"
+        android:label="@string/assessment"
+        tools:layout="@layout/fragment_assessment" />
+
+</navigation>
