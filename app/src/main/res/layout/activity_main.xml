@@ -18,7 +18,7 @@
             android:id="@+id/toolbar"
             android:background="@color/primaryColor"
             android:elevation="4dp"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
         <FrameLayout
@@ -36,6 +36,7 @@
                 android:id="@+id/bottomAppBar"
                 android:layout_gravity="bottom"
                 android:backgroundTint="@color/primaryColor"
+                app:fabAlignmentMode="center"
                 app:fabCradleMargin="10dp"
                 app:fabCradleRoundedCornerRadius="50dp">
 
@@ -57,7 +58,6 @@
                 android:contentDescription="Complete daily survey"
                 android:src="@drawable/baseline_add_24"
                 app:layout_anchor="@+id/bottomAppBar"
-                app:layout_anchorGravity="center"
                 app:maxImageSize="40dp" />
 
 
