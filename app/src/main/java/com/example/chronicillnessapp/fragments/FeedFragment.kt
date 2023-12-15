@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.chronicillnessapp.R
 
 
-class AssessmentFragment : Fragment() {
+class FeedFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -16,7 +16,7 @@ class AssessmentFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_assessment, container, false)
+        return inflater.inflate(R.layout.fragment_feed, container, false)
     }
 
 
