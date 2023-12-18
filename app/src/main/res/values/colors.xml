@@ -5,6 +5,11 @@
     <color name="backgroundColor">#ECF4D6</color>
     <color name="primaryColor">#2D9596</color>
     <color name="secondaryColor">#265073</color>
+    <color name="colorSleepQuality">#2B2A4C</color>
+    <color name="colorPainLevel">#B31312</color>
+    <color name="colorFatigueLevel">#EA906C</color>
+    <color name="colorMood">#FF6C22</color>
+    <color name="colorPhysicalActivity">#219C90</color>
 
     <color name="md_theme_light_primary">#00696A</color>
     <color name="md_theme_light_onPrimary">#FFFFFF</color>
