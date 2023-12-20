@@ -30,6 +30,7 @@ class HomeFragment : Fragment() {
         //return inflater.inflate(R.layout.fragment_home, container, false)
 
         setBarChartValues()
+        setProgressBar()
 
         return homeBinding.root
     }
@@ -141,6 +142,29 @@ class HomeFragment : Fragment() {
                 labels[value.toInt()]
             } else {
                 ""
+            }
+        }
+    }
+
+    private fun setProgressBar() {
+        var chronicDiagnosis = 55
+        homeBinding.healthProgressBar.progress = chronicDiagnosis
+        homeBinding.healthProgressBar.progressDrawable =
+            ContextCompat.getDrawable(requireContext(), R.drawable.custom_progress_bar)
+
+        when {
+            chronicDiagnosis <= 50 -> {
+                homeBinding.healthProgressBar.progressDrawable =
+                    ContextCompat.getDrawable(requireContext(), R.drawable.custom_progress_bar)
+            }
+            chronicDiagnosis <= 80 -> {
+                homeBinding.healthProgressBar.progressDrawable =
+                    ContextCompat.getDrawable(requireContext(), R.drawable.custom_progress_bar)
+
+            }
+            else -> {
+                homeBinding.healthProgressBar.progressDrawable =
+                    ContextCompat.getDrawable(requireContext(), R.drawable.custom_progress_bar)
             }
         }
     }

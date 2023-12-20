@@ -3,6 +3,8 @@ package com.example.chronicillnessapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
+import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -20,12 +22,14 @@ import com.example.chronicillnessapp.fragments.HomeFragment
 import com.example.chronicillnessapp.fragments.LanguageFragment
 import com.example.chronicillnessapp.fragments.PersonalInfoFragment
 import com.example.chronicillnessapp.fragments.SettingsFragment
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var fragmentManager: FragmentManager
     private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Thread.sleep(3000)
@@ -57,9 +61,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         fragmentManager = supportFragmentManager
         openFragment(HomeFragment())
 
-        binding.fab.setOnClickListener {
-            Toast.makeText(this, "Open Survey Pop Up", Toast.LENGTH_SHORT).show()
+        BottomSheetBehavior.from(binding.bottomSheet).apply {
+            peekHeight = 10
+            this.state = BottomSheetBehavior.STATE_COLLAPSED
+
+            addBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
+                override fun onStateChanged(bottomSheet: View, newState: Int) {
+                    when (newState) {
+                        BottomSheetBehavior.STATE_EXPANDED -> binding.fab.hide()
+                        BottomSheetBehavior.STATE_COLLAPSED -> binding.fab.show()
+                    }
+                }
+
+                override fun onSlide(bottomSheet: View, slideOffset: Float) {
+
+                }
+            })
         }
+
+        binding.fab.setOnClickListener {
+            BottomSheetBehavior.from(binding.bottomSheet).state = BottomSheetBehavior.STATE_EXPANDED
+        }
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -79,5 +102,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         fragmentTransaction.replace(R.id.fragment_container, fragment)
         fragmentTransaction.commit()
     }
+
+
 
 }
