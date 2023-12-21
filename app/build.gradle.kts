@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -52,6 +53,11 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("androidx.core:core-splashscreen:1.0.0")
     implementation("androidx.cardview:cardview:1.0.0")
+
+    //ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    //LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
 
     // Glide
     implementation("com.github.bumptech.glide:glide:4.11.0")

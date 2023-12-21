@@ -153,7 +153,7 @@
                                         android:id="@+id/pain_level_survey_description"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Please select the most suitable number that reflects your pain level (from 1 - no pain at all to 10 - severe pain)"
+                                        android:text="How is your day with regards to your physical and emotional well-being? Reflect your overall well-being level (from 1 - painful day to 10 - painless day)"
                                         android:textSize="12sp"
                                         app:layout_constraintTop_toBottomOf="@id/pain_level_survey_title"
                                         app:layout_constraintStart_toStartOf="parent"/>
@@ -168,6 +168,7 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent">
                                             <RadioGroup
+                                                android:id="@+id/pain_level_radio_group"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:orientation="horizontal"
@@ -297,7 +298,7 @@
                                         android:id="@+id/fatigue_level_survey_description"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Please select the most suitable number that reflects your fatigue level (from 1 - no fatigue at all to 10 - severe fatigue)"
+                                        android:text="How is you day with regards to your fatigue level? Reflect your fatigue level (from 1 - you have been extremely tired to 10 - you have had lots of energy)"
                                         android:textSize="12sp"
                                         app:layout_constraintTop_toBottomOf="@id/fatigue_level_survey_title"
                                         app:layout_constraintStart_toStartOf="parent"/>
@@ -312,6 +313,7 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent">
                                             <RadioGroup
+                                                android:id="@+id/fatigue_level_radio_group"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:orientation="horizontal"
@@ -441,7 +443,7 @@
                                         android:id="@+id/sleep_quality_survey_description"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Please select the most suitable number that reflects your sleep quality (from 1 - very bad sleep quality to 10 - very good sleep quality)"
+                                        android:text="How is your sleep? Reflect your sleep quality (from 1 - very bad sleep quality to 10 - very good sleep)"
                                         android:textSize="12sp"
                                         app:layout_constraintTop_toBottomOf="@id/sleep_quality_survey_title"
                                         app:layout_constraintStart_toStartOf="parent"/>
@@ -456,6 +458,7 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent">
                                             <RadioGroup
+                                                android:id="@+id/sleep_quality_radio_group"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:orientation="horizontal"
@@ -585,7 +588,7 @@
                                         android:id="@+id/mood_survey_description"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Please select the most suitable number that reflects your mood (from 1 - negative mood to 10 - positive mood)"
+                                        android:text="What is your overall mood? Reflect your mood (from 1 - you have experienced negative mood to 10 - you have experienced positive mood)"
                                         android:textSize="12sp"
                                         app:layout_constraintTop_toBottomOf="@id/mood_survey_title"
                                         app:layout_constraintStart_toStartOf="parent"/>
@@ -600,6 +603,7 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent">
                                             <RadioGroup
+                                                android:id="@+id/mood_radio_group"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:orientation="horizontal"
@@ -731,7 +735,7 @@
                                         android:id="@+id/physical_activities_survey_description"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Please select the most suitable number that reflects your physical activities (from 1 - low level of physical activities to 10 - high level of physical activities)"
+                                        android:text="How is your day with regards to physical activities? Reflect your satisfaction with the level of physical activities (from 1 - there are things that bother you to 10 - you enjoy the level of physical activities)"
                                         android:textSize="12sp"
                                         app:layout_constraintTop_toBottomOf="@id/physical_activities_survey_title"
                                         app:layout_constraintStart_toStartOf="parent"/>
@@ -746,6 +750,7 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent">
                                             <RadioGroup
+                                                android:id="@+id/physical_activities_radio_group"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:orientation="horizontal"
