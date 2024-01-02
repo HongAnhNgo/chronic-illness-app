@@ -8,12 +8,14 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chronicillnessapp.R
 import com.bumptech.glide.Glide
+import com.example.chronicillnessapp.database.ArticleEntity
 
-class ArticleAdapter(private val articles: List<Article>) : RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>() {
+class ArticleAdapter(private var articles: List<ArticleEntity>, private val onFavoriteClicked: (ArticleEntity) -> Unit) : RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>() {
 
     class ArticleViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val image: ImageView = view.findViewById(R.id.article_image)
         val title: TextView = view.findViewById(R.id.article_title)
+        val favoriteImageView: ImageView = view.findViewById(R.id.favoriteImageView)
         // Add other views if necessary
     }
 
@@ -25,17 +27,22 @@ class ArticleAdapter(private val articles: List<Article>) : RecyclerView.Adapter
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
         val article = articles[position]
         holder.title.text = article.title
+
         // Load image using Glide
         Glide.with(holder.itemView.context)
             .load(article.imageUrl)
             .into(holder.image)
+
+        // Handle favoriteImageView click
+        holder.favoriteImageView.setOnClickListener {
+            onFavoriteClicked(article)
+        }
+    }
+    fun updateArticles(newArticles: List<ArticleEntity>) {
+        this.articles = newArticles
+        notifyDataSetChanged()
     }
 
     override fun getItemCount() = articles.size
 }
 
-// Assuming you have an Article data class
-data class Article(
-    val title: String,
-    val imageUrl: String
-)
