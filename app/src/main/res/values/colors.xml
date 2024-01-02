@@ -10,6 +10,9 @@
     <color name="colorFatigueLevel">#EA906C</color>
     <color name="colorMood">#FF6C22</color>
     <color name="colorPhysicalActivity">#219C90</color>
+    <color name="colorGreen">#9ADE7B</color>
+    <color name="colorYellow">#EEF296</color>
+    <color name="colorRed">#FF8F8F</color>
 
     <color name="md_theme_light_primary">#00696A</color>
     <color name="md_theme_light_onPrimary">#FFFFFF</color>

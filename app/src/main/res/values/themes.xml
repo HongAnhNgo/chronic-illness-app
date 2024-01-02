@@ -38,4 +38,5 @@
         <item name="windowSplashScreenAnimatedIcon">@drawable/app_logo</item>
         <item name="postSplashScreenTheme">@style/Base.Theme.ChronicIllnessApp</item>
     </style>
+
 </resources>
