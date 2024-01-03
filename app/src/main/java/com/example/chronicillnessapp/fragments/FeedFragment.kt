@@ -1,6 +1,7 @@
 package com.example.chronicillnessapp.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +14,7 @@ import com.example.chronicillnessapp.adapters.ArticleAdapter
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
 import com.example.chronicillnessapp.database.ArticleDatabase
+import com.example.chronicillnessapp.network.ArticleRetrofitInstance
 import com.example.chronicillnessapp.viewmodels.ArticleViewModel
 import com.example.chronicillnessapp.viewmodels.ArticleViewModelFactory
 
@@ -32,12 +34,14 @@ class FeedFragment : Fragment() {
         // Initialize ViewModel
         val database = ArticleDatabase.getDatabase(requireContext())
         val articleDao = database.articleDao()
-        viewModel = ViewModelProvider(this, ArticleViewModelFactory(articleDao)).get(ArticleViewModel::class.java)
+        val apiService = ArticleRetrofitInstance.apiService
+        viewModel = ViewModelProvider(this, ArticleViewModelFactory(articleDao, apiService)).get(ArticleViewModel::class.java)
 
         setupRecyclerView(view)
         setupSearchView(view)
         setupFavoriteButton(view)
     }
+
 
     private fun setupRecyclerView(view: View) {
         recyclerView = view.findViewById(R.id.recyclerView)
@@ -50,6 +54,10 @@ class FeedFragment : Fragment() {
         recyclerView.adapter = adapter
 
         viewModel.allArticles.observe(viewLifecycleOwner, { articles ->
+            adapter.updateArticles(articles)
+        })
+        viewModel.chronicArticles.observe(viewLifecycleOwner, { articles ->
+            Log.d("FeedFragment", "Received ${articles.size} articles from ViewModel.")
             adapter.updateArticles(articles)
         })
     }
@@ -83,8 +91,4 @@ class FeedFragment : Fragment() {
     }
 
     // Add any additional methods or logic needed for your fragment here
-
-
 }
-
-
